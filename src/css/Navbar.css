@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik+Mono+One|Roboto+Mono:400,700&display=swap');
+
+:root {
+  --color-primary: #F5F5F5; 
+  --color-secondary:  #5e5e63;
+  --color-dark: rgb(33, 32, 32);
+  --color-light: black; 
+  --font-family-primary: 'Roboto Mono', monospace;
+  --font-family-secondary: 'Rubik Mono One', sans-serif;
+  
+  --td: 150ms;
+  --te: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/*   
+  // ================================
+  // Desktop Navbar
+  // ================================ */
+  
+
+#desktop_nav {
+    position: fixed; 
+    top: 3rem; 
+    z-index: 1000; 
+    border-radius: 30px;
+    padding: 10px 20px 10px 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.desktop_nav_bg{
+    background-color: rgba(255, 255, 255,0.5);
+    transition: all 1000ms ease;
+}
+
+.desktop_nav_bg_transparent{
+    background-color: transparent;
+    transition: all 1000ms ease;
+}
+
+.nav_links {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    font-size: 0.8rem;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav_links a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+    
+}
+
+.nav_links a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    text-decoration-color: rgb(181, 181, 181);
+}
+
+.nav_link {
+    padding: 5px 15px 5px 15px;
+    border-radius: 15px;
+}
+
+.current-page {
+    background-color: rgba(255, 255, 255,0.8); 
+    padding: 5px 15px 5px 15px;
+    border-radius: 15px;
+}
+
+.current-page a {
+    font-weight: bold;
+}
+
+/*   
+  // ================================
+  // Phone Nav Menue
+  // ================================ */
+
+#phone_nav{
+   display: none;
+}
+
+#phone_main_navigation {
+    z-index: 1500;
+}
+
+.phone_nav_main {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: -100%;
+  position: fixed;
+  transition: 
+    left 0s calc(var(--td) * 2),
+    transform 0s calc(var(--td) * 2);
+  width: 100%;
+  
+  &::before,
+  &::after {
+    content: '';
+    background-color: var(--color-primary);
+    height: 50%;
+    left: 0;
+    position: absolute;
+    transform: translateX(-110%);
+    transform-origin: 0 50%;
+    transition: transform calc(var(--td) * 2) var(--td) var(--te);
+    width: 100%;
+    z-index: -100;
+  }
+  
+  &::before {
+    top: 0;
+  }
+  
+  &::after {
+    bottom: 0;
+  }
+  
+  .phone_menu_item {
+    opacity: 0;
+    transform: translateX(-1rem);
+    transition: 
+      opacity var(--td) var(--te),
+      transform var(--td) var(--te);
+  }
+}
+
+/*   
+  // ================================
+  // Main navigation toggle
+  // ================================ */
+  
+[id="phone_navigation_toggle"] {
+  opacity: 0;
+  position: fixed;
+  top: -100%;
+  
+  ~ label {
+    cursor: pointer;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    z-index: 2000;
+    
+    span {
+      display: block;
+      height: 2rem;
+      padding: 0.5rem;
+      position: relative;
+      transition: transform calc(var(--td) * 3) var(--te);
+      width: 2rem;
+      
+      &::before,
+      &::after {
+        background-color: var(--color-dark);
+        bottom: 0;
+        content: '';
+        height: 4px;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        transition: transform calc(var(--td) * 3) var(--te);
+        top: 0;
+        width: calc(100% - 1rem);
+      }
+
+      &::before {
+        transform: rotate(0) translateY(-100%);
+      }
+
+      &::after {
+        transform: rotate(0) translateY(100%);
+      }
+    }
+  }
+}
+
+/*   
+  // ================================
+  // Main navigation toggle:checked
+  // ================================ */
+  
+[id="phone_navigation_toggle"]:checked ~ label {
+  span {
+    transform: rotate(1turn);
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+[id="phone_navigation_toggle"]:checked ~ .phone_nav_main {
+  left: 0;
+  transition: transform 0s;
+  
+  &::before,
+  &::after {
+    transform: translateX(0);
+    transition-delay: 0s;
+  }
+  
+  &::after {
+    transition-delay: calc(var(--td) / 2);
+  }
+  
+  .phone_menu_item {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 
+      opacity calc(var(--td) * 2) var(--te),
+      transform calc(var(--td) * 2) var(--te);
+  }
+  
+  @for $i from 1 through 5 {
+    .phone_menu_item:nth-child(#{$i}) {
+      transition-delay: calc(var(--td) * 2 * (#{$i} * 0.25));
+      z-index: $i * -1;
+    }
+  }
+}
+
+/*   
+  // ================================
+  // Phone Menu
+  // ================================ */
+
+  
+.phone_menu {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  
+  > .phone_menu_item {
+    font-family: var(--font-family-secondary);
+    font-size: 8vmin;
+  }
+}
+  
+/*   
+  // ================================
+  // Phone Menu Item
+  // ================================ */
+  
+.phone_menu_item {
+  display: block;
+  position: relative;
+  
+  &:hover .phone_menu_link {
+    &::before,
+    &::after {
+      animation: blink 1s var(--td) steps(1, end) forwards infinite;
+      transform: translateX(calc(100% - 0.5rem));
+      transition-duration: calc(var(--td) * 3);
+    }
+    
+    &::after {
+      transition-delay: calc(var(--td) / 2);
+    }
+  }
+  
+  &:hover .subphone_menu {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 
+      transform calc(var(--td) * 2) calc(var(--td) * 3) var(--te),
+      opacity calc(var(--td) * 2) calc(var(--td) * 3) var(--te),
+      visibility 0s calc(var(--td) * 3);
+    visibility: visible;
+  }
+}
+  
+/*   
+  // ================================
+  // Phone Menu Link
+  // ================================ */
+  
+.phone_menu_link {
+  color: var(--color-dark);
+  display: inline-block;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 0.5rem 1rem 0.125rem;
+  position: relative;
+  text-decoration: none;
+  transition: 
+    color var(--td) var(--te),
+    opacity var(--td) var(--te),
+    transform var(--td) var(--te);
+  z-index: 1;
+  
+  &::before,
+  &::after {
+    content: '';
+    background-color: var(--color-light);
+    height: 50%;
+    left: 0;
+    position: absolute;
+    transform: translateX(-110%);
+    transform-origin: 0 50%;
+    transition: transform 0s var(--te);
+    width: 100%;
+    z-index: -1;
+  }
+  
+  &::before {
+    top: 0;
+  }
+  
+  &::after {
+    bottom: 0;
+  }
+}
+/*   
+  // ================================
+  // Phone Menu Item Hover Styles
+  // ================================ */
+
+.phone_menu:not(:focus-within):not(:hover) .phone_menu_item {
+  .phone_menu_link { 
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.phone_menu_item {
+  --pull: 30%;
+  
+  .phone_menu_link {
+    opacity: 0.25;
+    transition-duration: calc(var(--td) * 3);
+    transform: translate(0, calc(var(--pull) * -1));
+  }
+  
+  .subphone_menu .phone_menu_link {
+    opacity: 1;
+  }
+  
+  &:hover > .phone_menu_link {
+    color: var(--color-secondary);
+    opacity: 1;
+    transform: translate(0, 0);
+    
+    &:hover {
+      color: var(--color-light);
+      transition-delay: 0s;
+    }
+  }
+  
+  &:hover ~ .phone_menu_item > .phone_menu_link {
+    transition-duration: calc(var(--td) * 3);
+    transform: translate(0, var(--pull));
+  }
+}
+  
+/*   
+  // ================================
+  // Animations
+  // ================================ */
+  
+@keyframes blink {
+  50%, 100% { opacity: 0 }
+}

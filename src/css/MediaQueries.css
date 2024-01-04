@@ -1,0 +1,161 @@
+
+/*   
+  // ================================
+  // Navbar
+  // ================================ */
+
+@media (max-width: 768px) {
+
+    #phone_nav {
+        display: block;
+    }
+
+    #desktop_nav {
+        display:none;
+    }
+
+}
+
+ /*   
+    // ================================
+    // About
+    // ================================ */
+
+@media (max-width: 768px) {
+
+    .about_content_2 .about_content_2_img {
+        display: none; 
+    }
+
+    .about_content_2 .about_text_2 {
+        width: 100%;
+    }
+
+    @keyframes slide {
+        0%, 10%, 100% {
+            width: 0;
+        }
+        70%, 90% {
+            width: 75%;
+        }
+    }
+    
+}
+
+ /*   
+    // ================================
+    // Education
+    // ================================ */
+
+@media (max-width: 768px) {
+
+    #Education .education_history_details,
+    #Education .languages_section,
+    #Education .skills_section {
+        width: 100%;
+        height: fit-content;
+        
+    }
+    
+    #Education .education_history_top{
+        display: none;
+    }
+
+    #Education .education_history_top_small_screen {
+        display: block;
+        padding: 20px;
+    }
+
+    #Education .education_history_bottom{
+        display: 100vh;
+    }
+}
+
+ /*   
+    // ================================
+    // Experience
+    // ================================ */
+
+@media screen and (max-width: 768px) {
+
+    #Experience {
+      padding: 1rem;
+      padding-bottom: 10rem;
+    }
+  
+    #Experience .card__container {
+      margin-top: 3rem;
+      width: 100%;
+      row-gap: 10rem;
+    }
+  
+    #Experience .card__article {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 500px;
+    }
+  
+    #Experience .card__data {
+      width: 90%;
+    }
+  
+}
+
+/*   
+    // ================================
+    // Projects
+    // ================================ */
+
+@media screen and (max-width: 768px) {
+
+    #Projects .project_card {
+        width: 70vw;
+    }
+   
+}
+
+/*   
+    // ================================
+    // Contact
+    // ================================ */
+
+@media screen and (max-width: 520px) {
+    #Contact .screen_body {
+        flex-direction: column;
+    }
+
+    #Contact .screen_body_item.left {
+        margin-bottom: 30px;
+    }
+
+    #Contact .app_title {
+        flex-direction: row;
+    }
+
+    #Contact .app_title span {
+        margin-right: 12px;
+    }
+
+    #Contact .app_title:after {
+        display: none;
+    }
+    
+    #Contact .app_contact {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #Contact .screen_body {
+        padding: 40px;
+    }
+
+    #Contact .screen_body_item {
+        padding: 0;
+    }
+
+    #Contact .screen_body_item.left {
+        margin-bottom: 30px;
+    }
+}

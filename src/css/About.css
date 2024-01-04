@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/*   
+  // ================================
+  // About 
+  // ================================ */
+
+#About {
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    min-height: fit-content;
+}
+
+/*   
+  // ================================
+  // About Content
+  // ================================ */
+
+.about_content {
+    width: 100%;
+    min-height: 100vh;
+    height: fit-content;
+    gap: 5vw;
+    display: flex;
+    flex-wrap: wrap;   
+    justify-content: center;
+}
+
+.profile_pic {
+    display: block;
+    margin: auto 0;
+    border-radius: 30px;
+    padding-top: 3rem;
+}
+
+.profile_pic img{
+    height: 50vh;
+    border-radius: 30px;
+    filter: grayscale(0.3);
+    transition: 500ms;
+    margin: 50px 0px 25px 0px;
+}
+
+
+.profile_pic img:hover{
+    filter: grayscale(0);
+    transform: scale(1.15) rotate(8deg);
+    transition: 500ms;
+}
+
+.about_text {
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    flex-direction: column;
+    padding: 3em;
+}
+
+.about_text_title {
+    font-size: max(6vw, 60px);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.about_text p {
+    font-weight: 600;
+    font-size: max(2vw, 25px);
+}
+
+.about_text_p1 {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+.about_text_p2 {
+    margin: 0px 0px 3rem 0px;
+    padding: 0px;
+}
+
+/*   
+  // ================================
+  // About Content Buttons
+  // ================================ */
+
+.btn_container {
+display: flex;
+justify-content: center;
+gap: 1rem;
+margin-bottom: 1rem;
+}
+
+.btn {
+font-weight: 600;
+transition: all 300ms ease;
+padding: 1rem;
+width: 8rem;
+border-radius: 2rem;
+}
+
+.btn_color_1,
+.btn_color_2 {
+border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn_color_1:hover,
+.btn_color_2:hover {
+cursor: pointer;
+}
+
+.btn_color_2,
+.btn_color_1:hover {
+background: rgb(53, 53, 53);
+color: white;
+}
+
+.btn_color_2:hover {
+background: rgb(0, 0, 0);
+}
+
+.btn_color_1 {
+background: none;
+}
+
+.btn_color_1:hover {
+border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+
+/*   
+  // ================================
+  // About Content Icons
+  // ================================ */
+
+.socials_container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.icon {
+    cursor: pointer;
+    height: 3rem;
+}
+/*   
+  // ================================
+  // About Content 2
+  // ================================ */
+
+.about_content_2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(245, 245, 245, 1);
+}
+
+.about_text_2,
+.about_content_2_img {
+    flex: 1;
+    height: 100%;
+}
+
+.about_content_2_img {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+
+.about_content_2_img img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    background-attachment: fixed;
+    transition: 500ms;
+}
+
+.about_content_2_img img:hover{
+    transform: scale(1.15);
+    transition: all 500ms;
+}
+
+
+.about_text_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    height: 100%;
+    width: 100%;
+    text-align: left; 
+    padding-left: 5rem;
+}
+
+.about_text_2 h1 {
+    font-size: max(3.5vw, 50px); 
+    text-align: left;
+    margin: 0px;
+    color: rgba(245, 245, 245, 1);
+    -webkit-text-stroke: 0.1vw rgb(200, 200, 200);
+    white-space: nowrap;
+}
+
+.about_text_2 h1::before{
+    margin: 0px;
+    width: 0;
+    content: attr(data-text);
+    position: absolute;
+    color: black;
+    -webkit-text-stroke: 0vw rgb(200, 200, 200);
+    border-right: 3px solid black;
+    overflow: hidden;
+    animation: slide 6s linear infinite;
+    --text-width: auto;
+    width:auto;
+}
+
+.about_text_2 p {
+    max-width: 80%;
+    font-size: max(1vw, 15px); 
+}
+
+.about_text_2 p {
+    border-left: 5px solid;
+    padding-left: 20px;
+}
+
+/*   
+  // ================================
+  // About Content 2 Animation
+  // ================================ */
+
+@keyframes slide {
+    0%, 10%, 100% {
+        width: 0;
+    }
+    70%, 90% {
+        width: 25%;
+    }
+}
+

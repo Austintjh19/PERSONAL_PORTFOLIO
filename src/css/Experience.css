@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/*   
+  // ================================
+  // Experience
+  // ================================ */
+
+#Experience {
+  min-height: 100vh;
+  background-color: rgba(245, 245, 245, 1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#Experience .card:hover {
+    transform: none;
+}
+
+#Experience .card {
+    border-radius: 30px;
+    background-color: white;
+    width: 350px;
+    height: fit-content;
+    margin: 0px;
+    padding: 30px;
+}
+
+/*   
+  // ================================
+  // Experience Headers
+  // ================================ */
+
+.experience_subheader {
+  padding-top: 100px;
+}
+
+.experience_subheader p{
+  font-size: max(1vw, 15px);
+}
+
+.experience_header {
+  position: relative;
+  height: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.experience_header h1 {
+  position: absolute;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  font-size: max(5vw, 50px);
+}
+
+.experience_header h1:nth-child(1){
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(0, 0, 0, 0.8);
+}
+
+.experience_header h1:nth-child(2){
+  color: rgb(0, 0, 0, 0.8);
+  animation: water_flow 2s ease-in-out infinite;
+}
+
+@keyframes water_flow {
+  0%, 100% {
+    clip-path: polygon(0% 35%, 15% 34%, 32% 40%, 54% 50%, 70% 51%, 84% 49%, 100% 42%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 50%, 16% 55%, 34% 56%, 51% 52%, 67% 40%, 84% 35%, 100% 36%, 100% 100%, 0% 100%);
+  }
+}
+
+/*   
+  // ================================
+  // Experience Card
+  // ================================ */
+
+.card__container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+  
+.card__article {
+  position: relative;
+  overflow: hidden;
+  width: 25vw;
+  height: 500px;
+}
+  
+.card__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+
+.card__data {
+  width: 22vw;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 30px;
+  position: absolute;
+  bottom: -8.5rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+  
+.card__description {
+  display: block;
+  font-size: max(0.6vw, 12.5px);
+  font-weight: normal;
+  text-align: left;
+}
+
+.card__title {
+  font-size: max(0.6vw, 12.5px);
+  font-weight: 600;
+  text-align: left;
+
+}
+  
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity .3s;
+}
+  
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+  
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+  
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+  
+/*   
+  // ================================
+  // Experience Card Animation
+  // ================================ */
+
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-5rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(10rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+
+
