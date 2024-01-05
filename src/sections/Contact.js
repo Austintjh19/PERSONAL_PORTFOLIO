@@ -1,5 +1,7 @@
 import '../css/Main.css';
 import '../css/Contact.css';
+import '../css/MediaQueries.css';
+
 
 export const Contact = () => {
 
