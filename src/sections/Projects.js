@@ -93,22 +93,26 @@ export const Projects = () => {
                         <p><br></br></p>
 
                         <div class="btn_container">
+                            <a href='https://github.com/Austintjh19/SignMeUp' target="_blank" rel="noreferrer">
                             <button
                                 
                                 className=""
-                                onclick="location.href='https://github.com/'"
+                                onclick=""
                             > <span>
                                 Github
                             </span> <i></i>
                             </button>
+                            </a>
+                            <a href='https://www.youtube.com/watch?v=_ZXdAOsF2AQ' target="_blank" rel="noreferrer">
                             <button
                         
                                 className=""
-                                onclick="location.href='https://github.com/'"
+                                onclick=""
                             ><span>
                                 Live Demo
                               </span> <i></i>
                             </button>
+                            </a>
                         </div>
                     </div>
                 </div>
