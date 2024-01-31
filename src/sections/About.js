@@ -41,7 +41,7 @@ export const About = () => {
                                 className="icon"
                                 onclick=""
                             />
-                            <a href="https://github.com/Austintjh19" target="_blank" rel="noopener">
+                            <a href="https://github.com/Austintjh19" target="_blank" rel="noreferrer">
                             <img
                                 src={github}
                                 alt="My Github profile"
