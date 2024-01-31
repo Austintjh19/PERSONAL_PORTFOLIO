@@ -57,7 +57,7 @@ export const Projects = () => {
                         <p><br></br></p>
 
                         <div class="btn_container">
-                            <a href='https://github.com/Austintjh19/PERSONAL_PORTFOLIO'>
+                            <a href='https://github.com/Austintjh19/PERSONAL_PORTFOLIO' target="_blank" rel="noreferrer">
                             <button
                                 className=""
                                 onclick=""
@@ -66,7 +66,7 @@ export const Projects = () => {
                             </span> <i></i>
                             </button>
                             </a>
-                            <a href='https://austintanjunheng.netlify.app/'>
+                            <a href='https://austintanjunheng.netlify.app/' target="_blank" rel="noreferrer">
                             <button
                                 className=""
                                 onclick="'"
