@@ -224,12 +224,12 @@
       transform calc(var(--td) * 2) var(--te);
   }
   
-  @for $i from 1 through 5 {
+  /* @for $i from 1 through 5 {
     .phone_menu_item:nth-child(#{$i}) {
       transition-delay: calc(var(--td) * 2 * (#{$i} * 0.25));
       z-index: $i * -1;
     }
-  }
+  } */
 }
 
 /*   

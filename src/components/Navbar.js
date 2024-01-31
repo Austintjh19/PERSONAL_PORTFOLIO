@@ -20,14 +20,6 @@ export const Navbar = () => {
 
     window.addEventListener('scroll', changeDesktop_Navbar_bg);
 
-    // Highlighting Current Page.
-    const location = useLocation();
-
-    const isCurrentPage = (pathname) => {
-        const path = window.location.hash.substr(1); 
-        return path === pathname;
-    };
-
     // Exiting Phone Menu. 
     const navLinks = document.querySelectorAll('#phone_main_navigation .phone_menu_link');
 

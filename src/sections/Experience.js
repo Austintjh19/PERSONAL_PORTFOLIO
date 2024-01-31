@@ -25,7 +25,7 @@ export const Experience = () => {
           
             <div class="card__container hidden">
                 <article class="card__article">
-                        <img src={Teaching} alt="image" class="card__img"/>
+                        <img src={Teaching} alt="Teaching_Image" class="card__img"/>
                     
 
                     <div class="card__data">
@@ -42,7 +42,7 @@ export const Experience = () => {
                 </article>
 
                 <article class="card__article">
-                    <img src={Email} alt="image" class="card__img"/>
+                    <img src={Email} alt="Email_Image" class="card__img"/>
 
                     <div class="card__data">
                         <h2 class="card__title">Admin/ Data Analyst, Burberry , Orchard, Singapore</h2>
@@ -60,7 +60,7 @@ export const Experience = () => {
                 </article>
 
                 <article class="card__article">
-                    <img src={Cashier} alt="image" class="card__img"/>
+                    <img src={Cashier} alt="Cashier_Image" class="card__img"/>
 
                     <div class="card__data">
                         <h2 class="card__title">Service Crew/ Cashier, Seoul Garden Hotpot, Jurong East, Singapore</h2>

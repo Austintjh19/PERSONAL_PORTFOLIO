@@ -47,6 +47,7 @@ export const Projects = () => {
                     <div className="project_img"> 
                         <img
                             src={website}
+                            alt='website_image'
                         />
                     </div>
 
@@ -80,6 +81,7 @@ export const Projects = () => {
                     <div className="project_img"> 
                         <img
                             src={SignMeUp}
+                            alt='SignMeUp_Image'
                         />
                     </div>
 
@@ -113,6 +115,7 @@ export const Projects = () => {
                     <div className="project_img"> 
                         <img
                             src={Court_Estore}
+                            alt='Estore_Image'
                         />
                     </div>
 
@@ -146,6 +149,7 @@ export const Projects = () => {
                     <div className="project_img"> 
                         <img
                             src={Others}
+                            alt='Others_Image'
                         />
                     </div>
 
