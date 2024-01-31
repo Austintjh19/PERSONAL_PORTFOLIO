@@ -57,22 +57,24 @@ export const Projects = () => {
                         <p><br></br></p>
 
                         <div class="btn_container">
+                            <a href='https://github.com/Austintjh19/PERSONAL_PORTFOLIO'>
                             <button
-                                
                                 className=""
-                                onclick="location.href='https://github.com/'"
+                                onclick=""
                             > <span>
                                 Github
                             </span> <i></i>
                             </button>
+                            </a>
+                            <a href='https://austintanjunheng.netlify.app/'>
                             <button
-                        
                                 className=""
-                                onclick="location.href='https://github.com/'"
+                                onclick="'"
                             ><span>
                                 Live Demo
                               </span> <i></i>
                             </button>
+                            </a>
                         </div>
                     </div>
                 </div>

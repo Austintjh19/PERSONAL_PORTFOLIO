@@ -63,7 +63,7 @@ a,
   position: absolute;
   white-space: nowrap;
   transform: translate(-50%, -50%);
-  font-size: max(5vw, 50px);
+  font-size: max(5vw, 30px);
 }
 
 .experience_header h1:nth-child(1){
