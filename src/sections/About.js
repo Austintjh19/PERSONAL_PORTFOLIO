@@ -32,7 +32,7 @@ export const About = () => {
 
                         <div className="btn_container hidden">
                             <button className="btn btn_color_1" onclick="">Download CV</button>
-                            <button className="btn btn_color_2" onclick="">Contact Info</button>
+                            <a href="#Contact"><button className="btn btn_color_2" onclick="#Contact">Contact Info</button></a>
                         </div>
                         <div className="socials_container hidden">
                             <img
@@ -41,12 +41,14 @@ export const About = () => {
                                 className="icon"
                                 onclick=""
                             />
+                            <a href="https://github.com/Austintjh19" target="_blank">
                             <img
                                 src={github}
                                 alt="My Github profile"
                                 className="icon"
                                 onclick=""
                             />
+                            </a>
                         </div>
                     </div>
                 </div>

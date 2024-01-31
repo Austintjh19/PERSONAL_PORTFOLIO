@@ -45,17 +45,15 @@ export const Experience = () => {
                     <img src={Email} alt="image" class="card__img"/>
 
                     <div class="card__data">
-                        <h2 class="card__title">Assistant/ Retail Assistant, Burberry , Orchard, Singapore</h2>
+                        <h2 class="card__title">Admin/ Data Analyst, Burberry , Orchard, Singapore</h2>
                         <span class="card__description">
                             <p>May 2023 - Sep 2023</p>
                             <p>
-                            • Delivered inventory reports to my supervisor in a timely fashion every week.
+                            • Utilised formulas and functions to automate calculations and analyses.
                             <br></br>
-                            • Redirected calls as needed and worked with my supervisor to address any outstanding issues or concerns.
+                            • Inputting data into spreadsheets or databases. Developed charts and graphs to visualise performance trends.
                             <br></br>
-                            • Documented all concerns and incidents and reported them to a senior supervisor.
-                            <br></br>
-                            • Maintained up to date knowledge of all retail promotions.
+                            • Generating reports and summaries for management review.
                             </p>
                         </span>
                     </div>
