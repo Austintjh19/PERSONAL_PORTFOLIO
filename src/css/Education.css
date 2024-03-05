@@ -61,7 +61,7 @@ a,
   // ================================ */
 
 .animated-text{
-    font-size: max(3.5vw, 15px); 
+    font-size: max(3.5vw, 30px); 
     font-weight: normal;
     white-space: nowrap;
 }
@@ -134,8 +134,7 @@ a,
 .education_history_bottom {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
 }
@@ -144,8 +143,8 @@ a,
 .education_history_details,
 .languages_section,
 .skills_section {
-    height: 20rem; 
-    width: 30rem;
+    height: 400px; 
+    width: 400px;
     margin-top: 3rem;
     background-color: white;
 }
@@ -161,6 +160,7 @@ a,
     padding-bottom: 3rem;
     border-radius: 2rem;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    margin-bottom: 50px;
 }
 
 .education_history_details_header {
@@ -205,6 +205,7 @@ a,
     padding-bottom: 3rem;
     border-radius: 2rem;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    margin-bottom: 50px;
 }
 
 .languages_section p{
@@ -265,6 +266,7 @@ a,
     padding-bottom: 3rem;
     border-radius: 2rem;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    margin-bottom: 50px;
 }
 
 .skills_section p {

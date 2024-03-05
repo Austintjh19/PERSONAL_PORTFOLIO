@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import profile_pic from '../multimedia/profile_pic.jpg'
 import linkedin from '../multimedia/linkedin.png'
 import github from '../multimedia/github.png'
+import resume from '../multimedia/Resume-Tan_Jun_Heng.pdf'
+
 import about_content_2_img from '../multimedia/parallax_img_1.jpg'
 
 import '../css/Main.css';
@@ -31,16 +33,18 @@ export const About = () => {
                         <p className="about_text_p2 hidden">Full Stack Developer</p>
 
                         <div className="btn_container hidden">
-                            <button className="btn btn_color_1" onclick="">Download CV</button>
+                            <a href={resume} target="_blank" rel="noreferrer"><button className="btn btn_color_1" onclick="">Download CV</button></a>
                             <a href="#Contact"><button className="btn btn_color_2" onclick="#Contact">Contact Info</button></a>
                         </div>
                         <div className="socials_container hidden">
+                            <a href="https://www.linkedin.com/in/jun-heng-tan-austin/" target="_blank" rel="noreferrer">
                             <img
                                 src={linkedin}
                                 alt="My LinkedIn profile"
                                 className="icon"
                                 onclick=""
                             />
+                             </a>
                             <a href="https://github.com/Austintjh19" target="_blank" rel="noreferrer">
                             <img
                                 src={github}

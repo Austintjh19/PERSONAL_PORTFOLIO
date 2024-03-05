@@ -19,7 +19,7 @@ a,
   // ================================ */
 
 #Experience {
-  min-height: 100vh;
+  min-height: calc(100vh + 100px);
   background-color: rgba(245, 245, 245, 1);
   display: flex;
   align-items: center;
@@ -56,14 +56,13 @@ a,
   position: relative;
   height: 100px;
   padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .experience_header h1 {
   position: absolute;
   white-space: nowrap;
   transform: translate(-50%, -50%);
-  font-size: max(5vw, 30px);
+  font-size: max(6vw, 50px);
 }
 
 .experience_header h1:nth-child(1){

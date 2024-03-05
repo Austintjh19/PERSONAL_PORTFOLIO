@@ -52,7 +52,7 @@
     #Education .education_history_details,
     #Education .languages_section,
     #Education .skills_section {
-        width: 100%;
+        width: 90%;
         height: fit-content;
         
     }
@@ -64,10 +64,16 @@
     #Education .education_history_top_small_screen {
         display: block;
         padding: 20px;
+        font-size: 30px;
     }
 
     #Education .education_history_bottom{
         display: 100vh;
+    }
+    #Education .card:hover {
+        transform: scale(1.05) translateY(-50px);
+        z-index: 10;
+        transition:  500ms;
     }
 }
 
@@ -85,7 +91,7 @@
   
     #Experience .card__container {
       margin-top: 3rem;
-      width: 100%;
+      width: 80%;
       row-gap: 10rem;
     }
   

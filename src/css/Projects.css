@@ -21,7 +21,7 @@ a,
 #Projects {
     min-height: 100vh;
     margin: 0;
-    padding: 1rem
+    padding: 1rem;
 }
 
 .project_details p, h1{
@@ -69,52 +69,37 @@ a,
 
  /*   
     // ================================
-    // Projects - Swiper
+    // Projects 
     // ================================ */
 
-.item{ 
-    height: 500px; 
-    min-width: max(25vw, 500px);
-    padding: 30px;
-    object-fit: cover;
-}
-
-.item img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
-    border-radius: 30px;
-    pointer-events: none;
-}
-
-.inner_carousel {
+#Projects .projects{
     display: flex;
-    background-color: antiquewhite;
-    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
 }
 
-.carousel {
-    cursor: grab;
-    overflow: hidden;
-    background-color: aliceblue;
-  
-}
+#Projects .projects::-webkit-scrollbar {
+    display: none;
+  }
 
 .project_card {
+    position: relative;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 2rem;
     padding-bottom: 3rem;
     border-radius: 30px;
-    width: max(500px, 20rem);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    margin: 50px;
+    margin: 50px 30px 100px 30px;
+    width: 450px;
+    min-width: 450px;
+    height: 700px;
 }
 
 .project_img {
     width: 100%;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
     border-radius: 30px;
 }
@@ -125,26 +110,49 @@ a,
     object-fit: cover;
     border-radius: 30px;
     filter: brightness(80%);
-
 }
 
+.project_details h1{
+    font-size: 20px;
+}
+
+.project_desrip p{
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.project_desrip {
+    padding: 10px;
+    margin-bottom: 30px;
+}
  /*   
     // ================================
     // Projects Button
     // ================================ */
 
 #Projects button {
-    position: relative;
     background: transparent;
     color: #272822;
     text-decoration: none;
     text-transform: uppercase;
     border: none;
     letter-spacing: 0.1rem;
-    font-size: max(0.8vw, 15px);
+    font-size: 13px;
     padding: 1rem 3rem;
     transition: 0.2s;
+}
 
+.button_left{
+    position: absolute;
+    left: 75px;
+    bottom: 50px;
+}
+
+.button_right{
+    position: absolute;
+    right: 75px;
+    bottom: 50px;
 }
   
 #Projects button:hover {

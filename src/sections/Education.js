@@ -19,7 +19,9 @@ export const Education = () => {
             { name: 'Java', experience: 'Experienced' },
             { name: 'Numpy', experience: 'Intermediate' },
             { name: 'Torch', experience: 'Basic' },
-            { name: 'Dart', experience: 'Intermediate' }
+            { name: 'Dart', experience: 'Intermediate' },
+            { name: 'SQL', experience: 'Intermediate' },
+            { name: 'PHP', experience: 'Intermediate' }
         ];
 
         const languagesContainer = document.createElement('div');
