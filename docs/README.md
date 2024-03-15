@@ -21,6 +21,8 @@ To view the website, simply visit [https://austintanjunheng.netlify.app/](https:
 - HTML
 - CSS
 - React.js
+- JavaScript
+- Bootstrap
 
 ## Installation
 
